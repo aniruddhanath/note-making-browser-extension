@@ -20,7 +20,7 @@ function addListeners(){
 		}
 	},false);
 	
-	var i = "<h2 style=\"margin:0px;\">Instructions</h2><hr/><li>&diams; By clicking Add New button new notes can be added by typing them on the blank Note-Pad.</li><br/><li>&diams; All your data will be saved automatically along with the date. Your notes can be accessed and edited at any point of time.</li><br/><li>&diams; Each note can be deleted at any point of time by clicking a Red button that will appear right next to it. Once deleted, can't be recovered.</li><hr/>";
+	var i = "<h2 style=\"margin:0px;\">Instructions</h2><hr/><li>&diams; By clicking Add New button new notes can be added by typing them on the blank Note-Pad.</li><br/><li>&diams; All your data will be saved automatically along with the date. Your notes can be accessed and edited at any point of time.</li><br/><li>&diams; Each note can be deleted at any point of time by clicking a Red button that will appear right next to it. Once deleted, can't be recovered.</li><br/><li>&diams; Please use this on the same browser. It is not a cross-browser application since it uses local-storage of your browser.</li><hr/>";
 	
 	$('instruction').addEventListener("click",function(){
 		$('list').innerHTML = "";
@@ -117,9 +117,6 @@ function RewriteFromStorage(){
 		var btn = document.createElement("button");
 		btn.id = id + "btn";
 		btn.onclick = function(){
-			if($('main').style.marginLeft=="0px"){
-				$('main').style.marginLeft = "320px";
-			}
 			$("notes").style.display = "none";
 			$("display").style.display = "block";
 			$("display").innerHTML = "";
@@ -131,13 +128,10 @@ function RewriteFromStorage(){
 				this.id = this.id.replace("btn","");
 				localStorage.removeItem("local-"+this.id);
 				$("notes").style.display = "block";
-				$(this.id).style.display = "none";
 				$("display").style.display = "none";
-				$("1").style.display = "block";
+				//reload the "main" position
+				$("notes").innerHTML = '<div id=\"1\" style=\"height:370px;padding:10px 15px 10px 15px;overflow-y:auto;\"><h2>Enjoy a simple, fast and elegant way of making notes with this App</h2><span style=\"position:absolute;bottom:110px\">Designed and Developed by Aniruddha Nath</span></div>';
 				RewriteFromStorage();
-			}
-			if($('main').style.marginLeft=="320px"){
-				$('main').style.marginLeft = "0px";
 			}
 		};
 		$('list').appendChild(btn);
