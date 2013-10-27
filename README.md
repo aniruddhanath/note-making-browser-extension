@@ -1,4 +1,4 @@
-note-making-browser-extension
+Note Making Browser Extension
 =============================
 
 
