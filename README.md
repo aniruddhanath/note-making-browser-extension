@@ -13,7 +13,7 @@ In order to use this, follow these steps:
 4.  Then select the extracted folder and hit Enter.
 5.  Thats it. Look at top-right corner of chrome-browser. Click on it to get started.
 
-*Use a more advanced version. Go to [THIS WEBSITE.](http://aniruddha1.byethost9.com/)*
+*Use a more advanced version. [Visit this Website.](http://aniruddha1.byethost9.com/)*
 ------------------------------------------------------------------------------------------------------------
 Follow along and download the extension.
 In this, not only you will be able to make notes on your browser, 
