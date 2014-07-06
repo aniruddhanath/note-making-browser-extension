@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="img/icon.png" rel="shortcut icon">
+<link rel="stylesheet" href="style.css">
+<title>Note-Making</title>
+<script src="script.js"></script>
+<script src="CsvDownload.js"></script>
+<script src="RewriteFromStorage.js"></script>
+</head>
+
+<body>
+<section>
+<div id="list1">
+	<ul id="list"></ul>
+    <input id="instruction" type="button" value="Instruction">
+    <input id="del_all" type="button" value="Delete all">
+</div><!--list to act as a menu-->
+
+<div id="main">
+    <div id="notes"><div id="1" style="height:370px;padding:10px 15px 10px 15px;overflow-y:auto;">
+        <h2>Enjoy a simple, fast and elegant way of making notes with this App</h2>
+        <span style="position:absolute;bottom:160px;left:100px;"><h2>&diams; Truth is God &diams;</h2></span>
+		<span style="position:absolute;bottom:110px;left:80px;">&diams; Developed by <em><a href="http://aniruddha.byethost17.com" target="_blank">Aniruddha22</a></em> &diams;</span>
+    </div></div>
+    <div id="display" style="display:none;" contenteditable="true"></div>
+    
+    <input id="new_note" type="button" value="Add New">
+    <input id="save_note" type="button" value="Save">
+    <a href="index1.php"><input id="sync" type="button" value="Connect" title="Sync with the server"></a>
+</div>
+</section>
+</body>
+</html>
