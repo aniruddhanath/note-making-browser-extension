@@ -13,8 +13,4 @@ You can directly compile this extension for Chrome by following these steps:
 4.  Select the extracted folder.
 5.  Look at top-right corner of the browser for extension-icon.
 
-*Use a more advanced version. [Visit this Website.](http://note-making.byethost17.com/)*
-------------------------------------------------------------------------------------------------------------
-Follow along and download the extension.
-In this, not only you will be able to make notes on your browser, 
-but also you can upload them to servers for safe keeping and use in different computers.
+*Website coming up next with more features [Visit the Website.](http://note-making.byethost17.com/)*
