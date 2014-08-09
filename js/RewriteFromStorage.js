@@ -92,7 +92,7 @@ function RewriteFromStorage () {
 			document.getElementById('list').innerHTML = "<h2 style=\"margin:0px;\">Hi There...</h2><p>You don't have any notes now.</p><p>If you didn't go through the Instructions, then please do that.<br/>Otherwise start by typing your text (on the right pane) after clicking <em>Add New</em> button</p><p>Happy note-making.</p>";
 		}
 	}
-	// If URL has 
+	// If URL has something
 	else {
 		var url = window.location.search.substring(1);
 		var data = url.split('=');

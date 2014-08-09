@@ -52,16 +52,7 @@ function AddListeners () {
 		}
 	},false);
 
-	$('upload_note').addEventListener("click",function () {
-		if(localStorage.length>0) {
-			if (confirm('You have already some notes. Do you want to overwrite them?')) {
-				CsvUpload();
-			}
-		} else {
-			CsvUpload();
-		}
-	},false);
-	
+
 	var i = "<h2 style=\"margin:0px;\">Instructions</h2><hr/><li>&diams; To add new notes, click <em>Add New</em> and start typing on the blank Note-Pad.</li><br/><li>&diams; All the data will be saved automatically along with date. Notes can be accessed and edited any time.</li><br/><li>&diams; Each note can be deleted at any point of time by clicking the Red button that will appear right next to it. Once deleted, can't be recovered.</li><br/><li>&diams; You can save your notes online for safe keeping and for transferring to other computers. Just press <em>Connect</em> and follow along.</li><hr/>";
 	
 	$('instruction').addEventListener("click",function () {

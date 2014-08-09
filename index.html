@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href="img/icon.png" rel="shortcut icon">
-<link rel="stylesheet" href="style.css">
-<title>Note-Making</title>
-<script src="js/main.js"></script>
-<script src="js/CsvDownload.js"></script>
-<script src="js/RewriteFromStorage.js"></script>
-<script src="js/CsvUpload.js"></script>
+    
+    <link href="img/icon.png" rel="shortcut icon">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Note-Making</title>
+    
+    <script src="js/main.js"></script>
+    <script src="js/CsvDownload.js"></script>
+    <script src="js/RewriteFromStorage.js"></script>
+    <script src="js/CsvUpload.js"></script>
+
 </head>
 
 <body>
-<section>
-<div id="list1">
-	<ul id="list"></ul>
-    <input id="instruction" type="button" value="Instruction">
-    <input id="del_all" type="button" value="Delete all">
-    <input id="save_note" type="button" value="Save">
-</div><!--list to act as a menu-->
 
-<div id="main">
-    <div id="notes"><div id="1" style="height:370px;padding:10px 15px 10px 15px;overflow-y:auto;">
-        <h2>Enjoy a simple, fast and elegant way of making notes with this App</h2>
-        <span style="position:absolute;bottom:160px;left:100px;"><h2>&diams; Truth is God &diams;</h2></span>
-		<span style="position:absolute;bottom:110px;left:80px;">&diams; Developed by <em><a href="http://aniruddha.byethost17.com" target="_blank">Aniruddha22</a></em> &diams;</span>
-    </div></div>
-    <div id="display" style="display:none;" contenteditable="true"></div>
+<section>
     
-    <input id="new_note" type="button" value="Add New">
-    <a href="index1.php"><input id="sync" type="button" value="Connect" title="Sync with the server"></a>
-    <input id="upload_note" type="button" value="Upload">
-</div>
+    <div id="list1">
+        <ul id="list"></ul>
+        <input id="instruction" type="button" value="Instruction">
+        <input id="del_all" type="button" value="Delete all">
+        <input id="save_note" type="button" value="Save">
+    </div><!--list to act as a menu-->
+
+    
+    <div id="main">
+        <div id="notes"><div id="1" style="height:370px;padding:10px 15px 10px 15px;overflow-y:auto;">
+            <h2>Enjoy a simple, fast and elegant way of making notes with this App</h2>
+            <span style="position:absolute;bottom:160px;left:100px;"><h2>&diams; Truth is God &diams;</h2></span>
+    		<span style="position:absolute;bottom:110px;left:80px;">&diams; Developed by <em><a href="http://aniruddha.byethost17.com" target="_blank">Aniruddha22</a></em> &diams;</span>
+        </div></div>
+        <div id="display" style="display:none;" contenteditable="true"></div>
+        
+        <input id="new_note" type="button" value="Add New">
+        <a href="index1.php"><input id="sync" type="button" value="Connect" title="Sync with the server"></a>
+    </div>
+
 </section>
-<div id="overlay" style="display:block">
-    <form enctype="multipart/form-data">
-        <input type="file" id="uploaded_file" accept="image/png, image/jpeg">
-        <input id="upload" type="button" value="Upload">
-        <div id="status"></div>
-    </form>
-</div>
+
 </body>
 </html>
