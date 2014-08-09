@@ -1,10 +1,6 @@
 {
   "name": "Note-Making",
-<<<<<<< HEAD
   "version": "1.2",
-=======
-  "version": "1.0",
->>>>>>> e97aec012a326a33268b4eb01ad304e993180fd2
   "permissions": [
     "tabs"
   ],
