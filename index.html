@@ -7,6 +7,7 @@
 <script src="js/main.js"></script>
 <script src="js/CsvDownload.js"></script>
 <script src="js/RewriteFromStorage.js"></script>
+<script src="js/CsvUpload.js"></script>
 </head>
 
 <body>
@@ -15,6 +16,7 @@
 	<ul id="list"></ul>
     <input id="instruction" type="button" value="Instruction">
     <input id="del_all" type="button" value="Delete all">
+    <input id="save_note" type="button" value="Save">
 </div><!--list to act as a menu-->
 
 <div id="main">
@@ -26,9 +28,16 @@
     <div id="display" style="display:none;" contenteditable="true"></div>
     
     <input id="new_note" type="button" value="Add New">
-    <input id="save_note" type="button" value="Save">
     <a href="index1.php"><input id="sync" type="button" value="Connect" title="Sync with the server"></a>
+    <input id="upload_note" type="button" value="Upload">
 </div>
 </section>
+<div id="overlay" style="display:block">
+    <form enctype="multipart/form-data">
+        <input type="file" id="uploaded_file" accept="image/png, image/jpeg">
+        <input id="upload" type="button" value="Upload">
+        <div id="status"></div>
+    </form>
+</div>
 </body>
 </html>

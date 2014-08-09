@@ -5,7 +5,7 @@ function RewriteFromStorage () {
 	if (window.location.search == "") {
 		
 		$('list').innerHTML = "";
-		var largestKey = largestSubscript(); // Larget no. found in the localhost key
+		var largestKey = LargestSubscript(); // Larget no. found in the localhost key
 		largestKey = parseInt(largestKey);
 		var k = largestKey;
 		

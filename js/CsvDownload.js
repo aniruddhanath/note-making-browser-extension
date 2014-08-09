@@ -1,7 +1,7 @@
 
 function CsvDownload () {
 	
-	var largestKey = largestSubscript();
+	var largestKey = LargestSubscript();
 	largestKey = parseInt(largestKey);
 	var k = largestKey;
 
@@ -15,9 +15,7 @@ function CsvDownload () {
 			// Parsing contents from LocalStorage
 			var content_split = content.split("</strong><span>");
 			
-			//var content_note = content_split[0].replace("<strong class=\"txt\">","");
-			//content_note = content_note.replace(/;comma;/g, ",").replace(/;colon;/g, ":");
-			var content_note = strip(content_split[0]);
+			var content_note = Strip(content_split[0]);
 			var content_date = content_split[1].replace("</span>","").replace("<SUP>","").replace("</SUP>","");
 			
 			csv += '"' + id + '", "' + content_date + '", "' + content_note + '",\r\n';
@@ -39,7 +37,7 @@ function CsvDownload () {
 	document.body.removeChild(link);
 }
 
-function strip (html) {
+function Strip (html) {
    var tmp = document.createElement("DIV");
    tmp.innerHTML = html;
    return tmp.textContent || tmp.innerText || "";

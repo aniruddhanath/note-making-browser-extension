@@ -1,12 +1,13 @@
-window.onload = addListeners;
+window.onload = AddListeners;
 
 // MAGIC holds the last id that is being shown on the notes area
 var MAGIC = "1";
 
-function addListeners () {
+function AddListeners () {
 	RewriteFromStorage();
 	
 	$('new_note').setAttribute("title","Add new notes");
+	$('save_note').setAttribute("title","Save notes in .csv file");
 	$('del_all').setAttribute("title","Delete all notes");
 	$('instruction').setAttribute("title","Instruction to use");
 	
@@ -50,6 +51,16 @@ function addListeners () {
 			alert("You have nothing to Save!!");	
 		}
 	},false);
+
+	$('upload_note').addEventListener("click",function () {
+		if(localStorage.length>0) {
+			if (confirm('You have already some notes. Do you want to overwrite them?')) {
+				CsvUpload();
+			}
+		} else {
+			CsvUpload();
+		}
+	},false);
 	
 	var i = "<h2 style=\"margin:0px;\">Instructions</h2><hr/><li>&diams; To add new notes, click <em>Add New</em> and start typing on the blank Note-Pad.</li><br/><li>&diams; All the data will be saved automatically along with date. Notes can be accessed and edited any time.</li><br/><li>&diams; Each note can be deleted at any point of time by clicking the Red button that will appear right next to it. Once deleted, can't be recovered.</li><br/><li>&diams; You can save your notes online for safe keeping and for transferring to other computers. Just press <em>Connect</em> and follow along.</li><hr/>";
 	
@@ -70,7 +81,7 @@ function addListeners () {
 		},false);
 	},false);
 		
-	$('new_note').addEventListener("click",new_note,false);
+	$('new_note').addEventListener("click",NewNote,false);
 }
 
 
@@ -79,7 +90,7 @@ function $ (x) {
 }
 
 
-function new_note () {
+function NewNote () {
 	$("display").style.display = "none";
 	$("notes").style.display = "block";
 	var lastchild_id = $('notes').lastChild.id;
@@ -87,7 +98,7 @@ function new_note () {
 	
 	// Creating new div for showing the typed values
 	var node = document.createElement("div");
-	var first_hope = largestSubscript();
+	var first_hope = LargestSubscript();
 	var new_id = parseInt(first_hope) + 1;
 	node.id = new_id;
 	$('notes').appendChild(node);
@@ -122,7 +133,7 @@ function new_note () {
 }
 
 // Finds the greatest no. at the end of localstorage key
-function largestSubscript () {
+function LargestSubscript () {
 	var L = localStorage.length;
 	var k = 0;
 	var arr = new Array(L);
