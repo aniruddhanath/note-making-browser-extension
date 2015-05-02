@@ -11,21 +11,6 @@ function AddListeners () {
 	$('del_all').setAttribute("title","Delete all notes");
 	$('instruction').setAttribute("title","Instruction to use");
 	
-	$('sync').addEventListener("click", function(event) {
-		event.preventDefault();
-		var address = document.URL;
-		if (localStorage.length!=0) {
-			var key = JSON.stringify(localStorage);
-		}
-		else {
-			var key = "BbSqhfYVEdUpnKrzOozCFqOqAbDeVuw5JFotwTmI9loxJUaAB8ASseSu1rvFKVYjVjVq2SD7Yf";
-		}
-		if (confirm("Your are about to connect to our server. Sure?")) {
-			window.location.href = "http://note-making.byethost17.com/?link="+address+"&key="+encodeURIComponent(btoa(key));
-		}
-	},false);
-	
-	
 	$('del_all').addEventListener("click",function() {
 		if (localStorage.length>0) {
 			if (confirm("Are your sure you want to delete everything?")) {
@@ -34,7 +19,7 @@ function AddListeners () {
 					$('list').innerHTML = "<h1>Well Start Fresh Now!!<h1>";
 					$("notes").style.display = "block";
 					$("display").style.display = "none";
-					$("notes").innerHTML = '<div id=\"1\" style=\"height:370px;padding:10px 15px 10px 15px;overflow-y:auto;\"><h2>Enjoy a simple, fast and elegant way of making notes with this App</h2><span style="position:absolute;bottom:110px;left:63px;">&diams; Developed by <em><a href="http://aniruddha.byethost17.com" target="_blank">Aniruddha Nath</a></em> &diams;</span>';
+					$("notes").innerHTML = '<div id=\"1\" style=\"height:370px;padding:10px 15px 10px 15px;overflow-y:auto;\"><h2>Enjoy a simple, fast and elegant way of making notes in your browser</h2><span style="position:absolute;bottom:110px;left:63px;">&diams; Developed by <em><a href="http://aniruddha.byethost17.com" target="_blank">Aniruddha Nath</a></em> &diams;</span>';
 				}
 			}
 		}
@@ -65,7 +50,7 @@ function AddListeners () {
 		$('list').appendChild(ok_node);
 		$("notes").style.display = "block";
 		$("display").style.display = "none";
-		$("notes").innerHTML = '<div id=\"1\" style=\"height:370px;padding:10px 15px 10px 15px;overflow-y:auto;\"><h2>Enjoy a simple, fast and elegant way of making notes with this App</h2><span style="position:absolute;bottom:110px;left:63px;">&diams; Developed by <em><a href="http://aniruddha.byethost17.com" target="_blank">Aniruddha Nath</a></em> &diams;</span>';
+		$("notes").innerHTML = '<div id=\"1\" style=\"height:370px;padding:10px 15px 10px 15px;overflow-y:auto;\"><h2>Enjoy a simple, fast and elegant way of making notes in your browser</h2><span style="position:absolute;bottom:110px;left:63px;">&diams; Developed by <em><a href="http://aniruddha.byethost17.com" target="_blank">Aniruddha Nath</a></em> &diams;</span>';
 				
 		ok_node.addEventListener("click",function () {
 			RewriteFromStorage();
