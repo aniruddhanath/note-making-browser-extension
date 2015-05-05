@@ -50,7 +50,7 @@ function AddListeners () {
 		$('list').appendChild(ok_node);
 		$("notes").style.display = "block";
 		$("display").style.display = "none";
-		$("notes").innerHTML = '<div id=\"1\" style=\"height:370px;padding:10px 15px 10px 15px;overflow-y:auto;\"><h2>Enjoy a simple, fast and elegant way of making notes in your browser</h2><span style="position:absolute;bottom:110px;left:63px;">&diams; Developed by <a href="http://aniruddha.byethost17.com" target="_blank">Aniruddha Nath</a></span>';
+		$("notes").innerHTML = '<div id=\"1\" style=\"height:370px;padding:10px 15px 10px 15px;overflow-y:auto;\"><h2>Enjoy a simple, fast and elegant way of making notes in your browser</h2><span style="position:absolute;bottom:110px;left:63px;">Developed by <a href="http://aniruddha.byethost17.com" target="_blank">Aniruddha Nath</a></span>';
 				
 		ok_node.addEventListener("click",function () {
 			RewriteFromStorage();
